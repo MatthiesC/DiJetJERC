@@ -291,15 +291,14 @@ void AnalysisModule_DiJetTrg::init_JEC(uhh2::Context& ctx){
   if(isMC){ //L123 for MC
     if (jetLabel == "AK4CHS") {
       MAKE_JEC_MC(Autumn18_V8, AK4PFchs)
-      else MAKE_JEC_MC(Autumn18_V17, AK4PFchs)
+      // else MAKE_JEC_MC(Autumn18_V17, AK4PFchs)
       else MAKE_JEC_MC(Autumn18_V19, AK4PFchs)
       else throw runtime_error("In AnalysisModule_DiJetTrg.cxx: Invalid JEC_Version for deriving residuals on AK4CHS, MC specified ("+JEC_Version+") ");
     } else if (jetLabel == "AK4Puppi") {
-      MAKE_JEC_MC(Autumn18_V17, AK4PFPuppi)
+      // MAKE_JEC_MC(Autumn18_V17, AK4PFPuppi)
       MAKE_JEC_MC(Autumn18_V19, AK4PFPuppi)
       else throw runtime_error("In AnalysisModule_DiJetTrg.cxx: Invalid JEC_Version for deriving residuals on AK4Puppi, MC specified ("+JEC_Version+") ");
     } else if (jetLabel == "AK8Puppi") {
-      MAKE_JEC_MC(Autumn18_V17, AK8PFPuppi)
       MAKE_JEC_MC(Autumn18_V19, AK8PFPuppi)
       else throw runtime_error("In AnalysisModule_DiJetTrg.cxx: Invalid JEC_Version for deriving residuals on AK8Puppi, MC specified ("+JEC_Version+") ");
     } else throw runtime_error("In AnalysisModule_DiJetTrg.cxx: Invalid jetLabel: "+jetLabel+" ");
@@ -308,37 +307,31 @@ void AnalysisModule_DiJetTrg::init_JEC(uhh2::Context& ctx){
       if(JECClosureTest){
         std::cout << "JECClosureTest applied" << '\n';
         MAKE_JEC(Autumn18_V8, AK4PFchs)
-        else MAKE_JEC(Autumn18_V17, AK4PFchs)
         else MAKE_JEC(Autumn18_V19, AK4PFchs)
         else throw runtime_error("In AnalysisModule_DiJetTrg.cxx: Invalid JEC_Version for deriving residuals on AK4CHS "+JEC_Version+", DATA specified.");
       } else {
         std::cout << "MAKE_JEC_noRes applied" << '\n';
-        MAKE_JEC_noRes(Autumn18_V17, AK4PFchs)
-        else MAKE_JEC_noRes(Autumn18_V19, AK4PFchs)
+        MAKE_JEC_noRes(Autumn18_V19, AK4PFchs)
         else throw runtime_error("In AnalysisModule_DiJetTrg.cxx: Invalid JEC_Version for deriving residuals on AK4CHS "+JEC_Version+", DATA specified.");
       }
     } else if (jetLabel == "AK4Puppi") {
       if(JECClosureTest){
         std::cout << "JECClosureTest applied" << '\n';
-        MAKE_JEC(Autumn18_V17, AK4PFPuppi)
-        else MAKE_JEC(Autumn18_V19, AK4PFPuppi)
+        MAKE_JEC(Autumn18_V19, AK4PFPuppi)
         else throw runtime_error("In AnalysisModule_DiJetTrg.cxx: Invalid JEC_Version for deriving residuals on AK4Puppi "+JEC_Version+", DATA specified.");
       } else {
         std::cout << "MAKE_JEC_noRes applied" << '\n';
-        MAKE_JEC_noRes(Autumn18_V17, AK4PFPuppi)
-        else MAKE_JEC_noRes(Autumn18_V19, AK4PFPuppi)
+        MAKE_JEC_noRes(Autumn18_V19, AK4PFPuppi)
         else throw runtime_error("In AnalysisModule_DiJetTrg.cxx: Invalid JEC_Version for deriving residuals on AK4Puppi "+JEC_Version+", DATA specified.");
       }
     } else if (jetLabel == "AK8Puppi") {
       if(JECClosureTest){
         std::cout << "JECClosureTest applied" << '\n';
-        MAKE_JEC(Autumn18_V17, AK8PFPuppi)
-        else MAKE_JEC(Autumn18_V19, AK8PFPuppi)
+        MAKE_JEC(Autumn18_V19, AK8PFPuppi)
         else throw runtime_error("In AnalysisModule_DiJetTrg.cxx: Invalid JEC_Version for deriving residuals on AK8Puppi "+JEC_Version+", DATA specified.");
       } else {
         std::cout << "MAKE_JEC_noRes applied" << '\n';
-        MAKE_JEC_noRes(Autumn18_V17, AK8PFPuppi)
-        else MAKE_JEC_noRes(Autumn18_V19, AK8PFPuppi)
+        MAKE_JEC_noRes(Autumn18_V19, AK8PFPuppi)
         else throw runtime_error("In AnalysisModule_DiJetTrg.cxx: Invalid JEC_Version for deriving residuals on AK8Puppi "+JEC_Version+", DATA specified.");
       }
     } else throw runtime_error("In AnalysisModule_DiJetTrg.cxx: Invalid jetLabel: "+jetLabel+" ");
