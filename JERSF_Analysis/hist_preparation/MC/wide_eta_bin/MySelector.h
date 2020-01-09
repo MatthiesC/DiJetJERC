@@ -23,7 +23,7 @@
 #include <vector>
 #include <algorithm>
 
-#include "/nfs/dust/cms/user/amalara/WorkingArea/UHH2_102X_v1/CMSSW_10_2_10/src/UHH2/DiJetJERC/include/constants.h"
+#include "/nfs/dust/cms/user/matthies/102X/CMSSW_10_2_10/src/UHH2/DiJetJERC/include/constants.h"
 
 
 double Weight( TString filename );

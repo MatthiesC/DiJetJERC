@@ -5,8 +5,8 @@
 #include <unistd.h>
 #include "TROOT.h"
 #include "TMath.h"
-#include "/nfs/dust/cms/user/amalara/WorkingArea/UHH2_102X_v1/CMSSW_10_2_10/src/UHH2/DiJetJERC/include/constants.h"
-#include "/nfs/dust/cms/user/amalara/WorkingArea/UHH2_102X_v1/CMSSW_10_2_10/src/UHH2/PersonalCode/tdrstyle_all.C"
+#include "/nfs/dust/cms/user/matthies/102X/CMSSW_10_2_10/src/UHH2/DiJetJERC/include/constants.h"
+#include "/nfs/dust/cms/user/matthies/AndreaMalara/PersonalCode/tdrstyle_all.C"
 
 typedef std::vector<TString> VecTS;
 typedef std::vector<string> VecS;
@@ -31,7 +31,7 @@ int shift_barrel = 1; // How many point used to calculate SF in the previous ste
 
 bool isOverlap = false; // just define the global variable. The value should be adjusted afterwards in the code; //TODO
 
-TString path_ = "/nfs/dust/cms/user/amalara/WorkingArea/UHH2_102X_v1/CMSSW_10_2_10/src/UHH2/DiJetJERC/JERSF_Analysis/JER/wide_eta_binning/file/";
+TString path_ = "/nfs/dust/cms/user/matthies/102X/CMSSW_10_2_10/src/UHH2/DiJetJERC/JERSF_Analysis/JER/wide_eta_binning/file/";
 
 TGraphErrors* CreateTGraphSF(TString filename = "SF_final_tex.txt") {
 

@@ -2,7 +2,7 @@ import sys
 import os
 import time
 
-sys.path.append("/nfs/dust/cms/user/amalara/WorkingArea/UHH2_102X_v1/CMSSW_10_2_10/src/UHH2/PersonalCode/")
+sys.path.append("/nfs/dust/cms/user/matthies/AndreaMalara/PersonalCode/")
 from parallelise import *
 
 def main_program(path="", list_path="", out_path="", JECVersions=[], JetLabels=[], systematics=[], samples=[], barrel_check = 0):
@@ -99,7 +99,7 @@ def main_program(path="", list_path="", out_path="", JECVersions=[], JetLabels=[
             print ("time needed: "+str((time.time()-temp_time))+" s")
 
 
-common_path = "/nfs/dust/cms/user/amalara/WorkingArea/UHH2_102X_v1/CMSSW_10_2_10/src/UHH2/DiJetJERC/JERSF_Analysis/hist_preparation/data/"
+common_path = "/nfs/dust/cms/user/matthies/102X/CMSSW_10_2_10/src/UHH2/DiJetJERC/JERSF_Analysis/hist_preparation/data/"
 study = "StandardPtBins"
 study = "MergeL2Res"
 
@@ -109,7 +109,7 @@ os.chdir(common_path+"wide_eta_bin/")
 
 inputdir = "DiJetJERC_DiJetHLT"
 
-sframe_ = "/nfs/dust/cms/user/amalara/sframe_all/"
+sframe_ = "/nfs/dust/cms/user/matthies/102X/sframe_all/"
 
 list_processes = []
 list_logfiles = []
@@ -131,4 +131,4 @@ print len(list_processes)
 for i in list_processes:
   print i
 
-parallelise(list_processes, 20, list_logfiles)
+parallelise(list_processes, 10, list_logfiles)

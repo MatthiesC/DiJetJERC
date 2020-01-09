@@ -32,7 +32,7 @@
 #include <TLorentzVector.h>
 #include <TRandom3.h>
 #include "MySelector.h"
-#include "/nfs/dust/cms/user/amalara/WorkingArea/UHH2_102X_v1/CMSSW_10_2_10/src/UHH2/DiJetJERC/include/constants.h"
+#include "/nfs/dust/cms/user/matthies/102X/CMSSW_10_2_10/src/UHH2/DiJetJERC/include/constants.h"
 
 #define FILL_HISTOS(region,method)                                                                      \
 if (TMath::Abs(weight/asy)>5*1e06) continue;                                                            \

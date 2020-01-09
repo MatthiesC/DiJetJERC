@@ -151,7 +151,7 @@ processes = QCD_process+Data_process
 # JetLabels = ["AK4CHS", "AK8Puppi"]
 # systematics = ["", "PU", "JEC", "JER"]
 
-userPathSframeOutput="/nfs/dust/cms/user/amalara/sframe_all/"
+userPathSframeOutput="/nfs/dust/cms/user/matthies/102X/sframe_all/"
 original_file = "DiJetJERC_DiJetHLT.xml"
 outdir = "DiJetJERC_DiJetHLT"
 original_dir_ = os.getcwd()
@@ -159,6 +159,7 @@ original_dir_ = os.getcwd()
 JECVersions_Data = ["Autumn18_V19"]
 JECVersions_MC   = ["Autumn18_V19"]
 JetLabels = ["AK4CHS","AK8Puppi", "AK4Puppi"]
+JetLabels = ["AK4CHS"]
 systematics = ["", "PU", "JEC", "JER"]
 systematics = ["", "PU", "JEC"]
 # systematics = [""]
@@ -173,3 +174,4 @@ extratext = ""
 original_dir = original_dir_
 original_dir += "/SubmittedJobs/"
 main_program(option, internal_option, processes, JECVersions_Data, JECVersions_MC, JetLabels, systematics, original_dir, original_file, isMB=isMB, test_trigger=test_trigger, isThreshold=isThreshold, isLowPt=isLowPt, isL1Seed=isL1Seed, isECAL=isECAL, extratext=extratext)
+

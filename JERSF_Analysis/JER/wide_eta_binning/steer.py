@@ -3,7 +3,7 @@ import os
 import time
 import numpy as np
 
-sys.path.append("/nfs/dust/cms/user/amalara/WorkingArea/UHH2_102X_v1/CMSSW_10_2_10/src/UHH2/PersonalCode/")
+sys.path.append("/nfs/dust/cms/user/matthies/AndreaMalara/PersonalCode/")
 from parallelise import *
 
 def getLabel(sample):
@@ -51,7 +51,7 @@ def main_function(gaustails=False, shiftForPLI="central", gaustail_num = 0.985):
     a = os.system(cmd)
     cmd = "cp functions.C %s" % (outdir)
     a = os.system(cmd)
-    cmd = "cp /nfs/dust/cms/user/amalara/WorkingArea/UHH2_102X_v1/CMSSW_10_2_10/src/UHH2/PersonalCode/tdrstyle_all.C %s" % (outdir)
+    cmd = "cp /nfs/dust/cms/user/matthies/AndreaMalara/PersonalCode/tdrstyle_all.C %s" % (outdir)
     a = os.system(cmd)
     os.chdir(outdir)
     os.makedirs("pdfy")
@@ -81,8 +81,8 @@ def main_function(gaustails=False, shiftForPLI="central", gaustail_num = 0.985):
 
 
 
-source_path = "/nfs/dust/cms/user/amalara/WorkingArea/UHH2_102X_v1/CMSSW_10_2_10/src/UHH2/DiJetJERC/JERSF_Analysis/hist_preparation/"
-common_path = "/nfs/dust/cms/user/amalara/WorkingArea/UHH2_102X_v1/CMSSW_10_2_10/src/UHH2/DiJetJERC/JERSF_Analysis/JER/wide_eta_binning/"
+source_path = "/nfs/dust/cms/user/matthies/102X/CMSSW_10_2_10/src/UHH2/DiJetJERC/JERSF_Analysis/hist_preparation/"
+common_path = "/nfs/dust/cms/user/matthies/102X/CMSSW_10_2_10/src/UHH2/DiJetJERC/JERSF_Analysis/JER/wide_eta_binning/"
 
 
 samples = ["A", "B", "C", "D", "ABC", "ABCD"]
