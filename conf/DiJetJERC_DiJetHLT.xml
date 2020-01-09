@@ -68,7 +68,7 @@
 
 <!--
 <ConfigParse NEventsBreak="0" FileSplit="500" AutoResubmit="5"/>
-<ConfigSGE RAM ="2" DISK ="2" mail="christopher.matthies@desy.de" Notification="as" Workdir="workdir_DiJetJERC_DiJetHLT"/>
+<ConfigSGE RAM ="2" DISK ="2" Mail="christopher.matthies@desy.de" Notification="as" Workdir="workdir_DiJetJERC_DiJetHLT"/>
 -->
 
 <!-- OutputLevel controls which messages are printed; set to VERBOSE or DEBUG for more verbosity, to WARNING or ERROR for less -->
